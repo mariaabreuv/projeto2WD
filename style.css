@@ -1,0 +1,46 @@
+body{
+    
+    --title: "coolvetica", sans-serif;
+    --laranja: #C4700A
+}
+
+section {
+    position: relative;
+    top: -8px;
+    left: -8px;
+}
+
+.title {
+    font-family: var(--title);
+    background: var(--laranja);
+    display: flex;
+    width: 91rem;
+    height: 35.125rem;
+    padding: 3.5rem 2.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.title span{
+    color: #FFF;
+    font-family: Coolvetica;
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.title span + span {
+    color: #FFF;
+    font-family: Coolvetica;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+}

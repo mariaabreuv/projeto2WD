@@ -1,0 +1,72 @@
+{
+    "drinks": [
+        {
+            "name": "Caipirinha",
+            "ingredients": ["Cachaça", "Lime", "Sugar", "Ice"],
+            "pairing": "Pastries and coxinhas",
+            "description": "A refreshing and citrusy Brazilian classic."
+        },
+        {
+            "name": "Mojito",
+            "ingredients": ["Rum", "Mint", "Sugar", "Lime", "Soda water"],
+            "pairing": "Guacamole and nachos",
+            "description": "A refreshing Cuban cocktail, perfect for hot days."
+        },
+        {
+            "name": "Pisco Sour",
+            "ingredients": ["Pisco", "Lime", "Sugar", "Egg white"],
+            "pairing": "Ceviche",
+            "description": "A Peruvian drink with a citrus twist that pairs well with seafood."
+        },
+        {
+            "name": "Gin and Tonic",
+            "ingredients": ["Gin", "Tonic water", "Lime", "Ice"],
+            "pairing": "Cheese board and fresh fruits",
+            "description": "A light and versatile drink, perfect for pairing with cheeses."
+        },
+        {
+            "name": "Traçadinho",
+            "ingredients": ["Cachaça", "Sugar", "Lemon"],
+            "pairing": "Chips and dips",
+            "description": "A delicious Brazilian drink that pairs well with savory snacks."
+        },
+        {
+            "name": "Poncha",
+            "ingredients": ["Aguardente", "Honey", "Lemon juice"],
+            "pairing": "Spicy snacks",
+            "description": "A traditional Madeiran drink, sweet and tangy, ideal with spicy foods."
+        }
+    ],
+    "snacks": [
+        {
+            "name": "Pastries",
+            "description": "Delicious fried pastries, perfect for pairing with the citrusy caipirinha.",
+            "pairing": ["Caipirinha"]
+        },
+        {
+            "name": "Guacamole",
+            "description": "A creamy avocado dip that pairs perfectly with nachos and mojitos.",
+            "pairing": ["Mojito"]
+        },
+        {
+            "name": "Ceviche",
+            "description": "Fresh fish marinated in citrus, a great companion to pisco sour.",
+            "pairing": ["Pisco Sour"]
+        },
+        {
+            "name": "Cheese Board",
+            "description": "An assortment of cheeses that pairs beautifully with gin and tonic.",
+            "pairing": ["Gin and Tonic"]
+        },
+        {
+            "name": "Chips",
+            "description": "Crunchy snacks that complement a variety of drinks.",
+            "pairing": ["Traçadinho", "Poncha"]
+        },
+        {
+            "name": "Spicy Snacks",
+            "description": "Flavored snacks that go well with the sweet and tangy poncha.",
+            "pairing": ["Poncha"]
+        }
+    ]
+}
