@@ -1,27 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.cdnfonts.com/css/coolvetica-2" rel="stylesheet">          
+    <link href="https://fonts.cdnfonts.com/css/coolvetica-2" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
     <title>Pour Decisions</title>
+
 <body>
-    <section>
+    <section class="cover">
         <div class="title">
             <span>Pour Decisions</span>
             <span>Pick your sip and snack combo</span>
         </div>
         <div class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
-                <mask id="mask0_4_158" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="37" height="37">
-                  <rect y="37" width="37" height="37" transform="rotate(-90 0 37)" fill="#D9D9D9"/>
+                <mask id="mask0_4_158" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="37"
+                    height="37">
+                    <rect y="37" width="37" height="37" transform="rotate(-90 0 37)" fill="#D9D9D9" />
                 </mask>
                 <g mask="url(#mask0_4_158)">
-                  <path d="M33.9168 21.5833L18.5002 37L3.0835 21.5833L5.81995 18.8469L18.5002 31.5271L31.1804 18.8469L33.9168 21.5833Z" fill="#C4700A"/>
+                    <path
+                        d="M33.9168 21.5833L18.5002 37L3.0835 21.5833L5.81995 18.8469L18.5002 31.5271L31.1804 18.8469L33.9168 21.5833Z"
+                        fill="#C4700A" />
                 </g>
-              </svg>
+            </svg>
         </div>
     </section>
+
+    <section class="containerDrink">
+        <span class="heading">Drinks</span>
+
+
+        <div class="carousel-container">
+            <div class="drinks">
+
+                <span class="cards">
+                    <img class="size" src="images/caipirinha.webp" alt="caipirinha">
+                    <h3>Caipirinha</h3>
+                    <span class="openPopup">How to make it</span>
+                </span>
+                <span class="cards">
+                    <img class="size" src="images/Mojito.webp" alt="Mojito">
+                    <h3>Mojito</h3>
+                    <span class="openPopup">How to make it</span>
+                </span>
+                <span class="cards">
+                    <img class="size" src="images/ginTonica.webp" alt="Gin&Tonica">
+                    <h3>Gin & Tonic</h3>
+                    <span class="openPopup">How to make it</span>
+                </span>
+                <span class="cards">
+                    <img class="size" src="images/pisco.webp" alt="pisco">
+                    <h3>Pisco</h3>
+                    <span class="openPopup">How to make it</span>
+                </span>
+                <span class="cards">
+                    <img class="size" src="images/tracadinho.webp" alt="tracadinho">
+                    <h3>Traçadinho</h3>
+                    <span class="openPopup">How to make it</span>
+                </span>
+                <span class="cards">
+                    <img class="size" src="images/poncha.webp" alt="poncha">
+                    <h3>Poncha</h3>
+                    <span class="openPopup">How to make it</span>
+                </span>
+                <span class="cards">
+                    <img class="size" src="images/martini.webp" alt="martini">
+                    <h3>Martini</h3>
+                    <span class="openPopup">How to make it</span>
+                </span>
+                <span class="cards">
+                    <img class="size" src="images/pinaColada.webp" alt="pinaColada">
+                    <h3>Piña Colada</h3>
+                    <span class="openPopup">How to make it</span>
+                </span>
+
+            </div>
+        </div>
+
+    </section>
+
+    
+
+    <div class="popup" id="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-popup">×</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-description"></p>
+            <h4>Ingredients:</h4>
+            <ul id="popup-ingredients"></ul>
+        </div>
+    </div>
+
+
 </body>
 </html>

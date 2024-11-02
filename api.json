@@ -13,20 +13,20 @@
             "description": "A refreshing Cuban cocktail, perfect for hot days."
         },
         {
-            "name": "Pisco Sour",
+            "name": "Pisco",
             "ingredients": ["Pisco", "Lime", "Sugar", "Egg white"],
             "pairing": "Ceviche",
             "description": "A Peruvian drink with a citrus twist that pairs well with seafood."
         },
         {
-            "name": "Gin and Tonic",
+            "name": "Gin & Tonic",
             "ingredients": ["Gin", "Tonic water", "Lime", "Ice"],
             "pairing": "Cheese board and fresh fruits",
             "description": "A light and versatile drink, perfect for pairing with cheeses."
         },
         {
             "name": "Traçadinho",
-            "ingredients": ["Cachaça", "Sugar", "Lemon"],
+            "ingredients": ["Vinho", "Lemon soda"],
             "pairing": "Chips and dips",
             "description": "A delicious Brazilian drink that pairs well with savory snacks."
         },
@@ -35,6 +35,18 @@
             "ingredients": ["Aguardente", "Honey", "Lemon juice"],
             "pairing": "Spicy snacks",
             "description": "A traditional Madeiran drink, sweet and tangy, ideal with spicy foods."
+        },
+        {
+            "name": "Piña Colada",
+            "description": "A tropical cocktail with a creamy, fruity flavor.",
+            "pairing": "Tropical Fruit Skewers",
+            "ingredients": ["Rum", "Coconut cream", "Pineapple juice", "Ice"]
+        },
+        {
+            "name": "Martini",
+            "description": "A sophisticated cocktail with a smooth finish.",
+            "pairing": "Nuts",
+            "ingredients": ["Gin", "Dry Vermouth", "Olive or Lemon Twist"]
         }
     ],
     "snacks": [
@@ -67,6 +79,16 @@
             "name": "Spicy Snacks",
             "description": "Flavored snacks that go well with the sweet and tangy poncha.",
             "pairing": ["Poncha"]
+        },
+        {
+            "name": "Tropical Fruit Skewers",
+            "description": "Skewers with tropical fruits that enhance the sweetness of a Piña Colada.",
+            "pairing": ["Piña Colada"]
+        },
+        {
+            "name": "Nuts",
+            "description": "A light snack perfect for pairing with a classic Martini.",
+            "pairing": ["Martini"]
         }
     ]
 }

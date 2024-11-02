@@ -1,10 +1,30 @@
-body{
-    
+body {
+
     --title: "coolvetica", sans-serif;
-    --laranja: #C4700A
+    --text: 'Aleo';
+    --orange: #C4700A;
+    --green: #007C00;
+    --white: #FFF;
+    --bgGrey: #F5F5F5;
 }
 
-section {
+body::-webkit-scrollbar, .drinks::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+body::-webkit-scrollbar-track, .drinks::-webkit-scrollbar-track {
+    background: none;
+}
+
+body::-webkit-scrollbar-thumb, .drinks::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 20px;
+    border: none;
+}
+
+
+.cover {
     position: relative;
     top: -8px;
     left: -8px;
@@ -12,9 +32,9 @@ section {
 
 .title {
     font-family: var(--title);
-    background: var(--laranja);
+    background: var(--orange);
     display: flex;
-    width: 91rem;
+    width: 89.93rem;
     height: 35.125rem;
     padding: 3.5rem 2.5rem;
     flex-direction: column;
@@ -23,17 +43,18 @@ section {
     flex-shrink: 0;
 }
 
-.title span{
-    color: #FFF;
+.title span {
+    color: var(--white);
     font-family: Coolvetica;
     font-size: 6rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-.title span + span {
+
+.title span+span {
     color: #FFF;
-    font-family: Coolvetica;
+    font-family: var(--title);
     font-size: 2.25rem;
     font-style: normal;
     font-weight: 400;
@@ -43,4 +64,106 @@ section {
 .arrow {
     display: flex;
     justify-content: center;
+}
+
+.containerDrink {
+    font-family: var(--title);
+    display: flex;
+    width: 83.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+}
+
+.heading {
+    font-size: xx-large;
+}
+
+.drinks {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-left: 10px;
+    gap: 1.5rem;
+}
+
+.size {
+    width: 13rem;
+    height: auto;
+}
+
+h3 {
+    color: black;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem 1rem 1rem;
+    color: var(--bgGrey);
+    border-radius: 0.5rem;
+    font-family: var(--text);
+    background: var(--bgGrey);
+    height: 15rem;
+    justify-content: space-between;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: 100%;
+    padding: 0;
+}
+
+.cards:first-child {
+    margin-left: 20px;
+    /* Adjust value as needed */
+}
+
+
+.openPopup:hover {
+    cursor: pointer;
+}
+
+.openPopup {
+    display: flex;
+    padding: 0.5rem 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+    border-radius: 0.5rem;
+    background: var(--green);
+    color: var(--white)
+}
+
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close-popup {
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+    margin-top: -10px;
 }
