@@ -6,19 +6,20 @@ body {
     --green: #007C00;
     --white: #FFF;
     --bgGrey: #F5F5F5;
+    --scrollBar: #767676;
 }
 
-body::-webkit-scrollbar, .drinks::-webkit-scrollbar {
+body::-webkit-scrollbar, .drinks::-webkit-scrollbar, .food::-webkit-scrollbar {
     width: 4px;
     height: 4px;
 }
 
-body::-webkit-scrollbar-track, .drinks::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track, .drinks::-webkit-scrollbar-track, .food::-webkit-scrollbar-track {
     background: none;
 }
 
-body::-webkit-scrollbar-thumb, .drinks::-webkit-scrollbar-thumb {
-    background: var(--orange);
+body::-webkit-scrollbar-thumb, .drinks::-webkit-scrollbar-thumb, .food::-webkit-scrollbar-thumb {
+    background: var(--scrollBar);
     border-radius: 20px;
     border: none;
 }
@@ -66,10 +67,10 @@ body::-webkit-scrollbar-thumb, .drinks::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
-.containerDrink {
+.containerDrink, .containerFood {
     font-family: var(--title);
     display: flex;
-    width: 83.75rem;
+    width: 90.75rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
@@ -80,11 +81,10 @@ body::-webkit-scrollbar-thumb, .drinks::-webkit-scrollbar-thumb {
     font-size: xx-large;
 }
 
-.drinks {
+.drinks, .food {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    margin-left: 10px;
     gap: 1.5rem;
 }
 
@@ -118,10 +118,6 @@ h3 {
     padding: 0;
 }
 
-.cards:first-child {
-    margin-left: 20px;
-    /* Adjust value as needed */
-}
 
 
 .openPopup:hover {
@@ -140,8 +136,13 @@ h3 {
     color: var(--white)
 }
 
+ul {
+    list-style: none;
+}
+
 
 .popup {
+    font-family: var(--text);
     position: fixed;
     left: 0;
     top: 0;
@@ -166,4 +167,9 @@ h3 {
     float: right;
     font-size: 24px;
     margin-top: -10px;
+}
+
+input:checked +label {
+    text-decoration: line-through;
+    color: var(--scrollBar);
 }
