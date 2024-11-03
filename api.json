@@ -28,7 +28,7 @@
             "name": "Traçadinho",
             "ingredients": ["Vinho", "Lemon soda"],
             "pairing": "Chips and dips",
-            "description": "A delicious Brazilian drink that pairs well with savory snacks."
+            "description": "A delicious Portuguese drink that pairs well with chips."
         },
         {
             "name": "Poncha",
@@ -49,10 +49,10 @@
             "ingredients": ["Gin", "Dry Vermouth", "Olive or Lemon Twist"]
         }
     ],
-    "snacks": [
+    "Pairing": [
         {
-            "name": "Pastries",
-            "description": "Delicious fried pastries, perfect for pairing with the citrusy caipirinha.",
+            "name": "Pastel",
+            "description": "Delicious fried pastel, perfect for pairing with the citrusy caipirinha.",
             "pairing": ["Caipirinha"]
         },
         {
@@ -76,7 +76,7 @@
             "pairing": ["Traçadinho", "Poncha"]
         },
         {
-            "name": "Spicy Snacks",
+            "name": "Cod Fish ball",
             "description": "Flavored snacks that go well with the sweet and tangy poncha.",
             "pairing": ["Poncha"]
         },
