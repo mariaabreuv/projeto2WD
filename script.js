@@ -7,12 +7,12 @@ fetch('api.json')
 
 
     function PopupEventListeners(data) {
-        const PopupButtons = document.querySelectorAll('.openPopup');
+        let PopupButtons = document.querySelectorAll('.openPopup');
         PopupButtons.forEach(button => {
             button.addEventListener('click', () => {
-                const drinkName = button.previousElementSibling.textContent.trim();
-                const drink = data.drinks.find(d => d.name === drinkName);
-                const food = data.Pairing.find(f => f.name === drinkName);
+                let drinkName = button.previousElementSibling.textContent.trim();
+                let drink = data.drinks.find(d => d.name === drinkName);
+                let food = data.Pairing.find(f => f.name === drinkName);
     
                 if (drink) {
                     openPopup(drink, 'drink');
@@ -38,18 +38,18 @@ fetch('api.json')
         ingredientsContainer.innerHTML = ''; // Clear previous contents
     
 
-        const heading = document.createElement('h5');
+        let heading = document.createElement('h5');
         heading.textContent = type === 'drink' ? 'Ingredients' : 'Eat it with:';
         ingredientsContainer.appendChild(heading);
 
         if (type === 'drink') {
             item.ingredients.forEach(ingredient => {
-                const checkbox = document.createElement('input');
+                let checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
                 checkbox.id = ingredient;
                 checkbox.name = ingredient;
     
-                const label = document.createElement('label');
+                let label = document.createElement('label');
                 label.htmlFor = ingredient;
                 label.textContent = ingredient;
     
@@ -57,13 +57,15 @@ fetch('api.json')
                 ingredientsContainer.appendChild(label);
                 ingredientsContainer.appendChild(document.createElement('br'));
 
+
+
                 
 
             });
         } else if (type === 'pairing') {
             item.pairing.forEach(drink => {
     
-                const label = document.createElement('label');
+                let label = document.createElement('label');
                 label.htmlFor = drink;
                 label.textContent = drink;
     
