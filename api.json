@@ -2,93 +2,187 @@
     "drinks": [
         {
             "name": "Caipirinha",
-            "ingredients": ["Cachaça", "Lime", "Sugar", "Ice"],
+            "ingredients": [
+                "Cachaça",
+                "Lime",
+                "Sugar",
+                "Ice"
+            ],
             "pairing": "Pastries and coxinhas",
-            "description": "A refreshing and citrusy Brazilian classic."
+            "description": "A refreshing and citrusy Brazilian classic.",
+            "steps": [
+                "Cut the lime into quarters and remove the white core to avoid bitterness.",
+                "Muddle the lime with sugar in a glass.",
+                "Add ice cubes, pour in the cachaça, and stir well."
+            ]
         },
         {
             "name": "Mojito",
-            "ingredients": ["Rum", "Mint", "Sugar", "Lime", "Soda water"],
+            "ingredients": [
+                "Rum",
+                "Mint",
+                "Sugar",
+                "Lime",
+                "Soda water"
+            ],
             "pairing": "Guacamole and nachos",
-            "description": "A refreshing Cuban cocktail, perfect for hot days."
+            "description": "A refreshing Cuban cocktail, perfect for hot days.",
+            "steps": [
+                "Muddle mint leaves with sugar and lime juice in a glass.",
+                "Add ice cubes and rum, then top off with soda water.",
+                "Garnish with more mint leaves."
+            ]
         },
         {
             "name": "Pisco",
-            "ingredients": ["Pisco", "Lime", "Sugar", "Egg white"],
+            "ingredients": [
+                "Pisco",
+                "Lime",
+                "Sugar",
+                "Egg white"
+            ],
             "pairing": "Ceviche",
-            "description": "A Peruvian drink with a citrus twist that pairs well with seafood."
+            "description": "A traditional Peruvian drink with a citrus twist.",
+            "steps": [
+                "In a shaker, combine pisco, lime juice, sugar, and egg white.",
+                "Shake vigorously with ice until frothy.",
+                "Strain into a glass and add a dash of bitters if desired."
+            ]
         },
         {
             "name": "Gin & Tonic",
-            "ingredients": ["Gin", "Tonic water", "Lime", "Ice"],
+            "ingredients": [
+                "Gin",
+                "Tonic water",
+                "Lime",
+                "Ice"
+            ],
             "pairing": "Cheese board and fresh fruits",
-            "description": "A light and versatile drink, perfect for pairing with cheeses."
+            "description": "A light and versatile drink.",
+            "steps": [
+                "Fill a glass with ice cubes.",
+                "Pour in gin and top off with tonic water.",
+                "Garnish with a lime wedge."
+            ]
         },
         {
             "name": "Traçadinho",
-            "ingredients": ["Vinho", "Lemon soda"],
+            "ingredients": [
+                "Wine",
+                "Lemon soda"
+            ],
             "pairing": "Chips and dips",
-            "description": "A delicious Portuguese drink that pairs well with chips."
+            "description": "A delicious Portuguese drink very used by university students.",
+            "steps": [
+                "Fill a glass with ice cubes.",
+                "Pour equal parts of wine and lemon soda.",
+                "Stir gently and serve."
+            ]
         },
         {
             "name": "Poncha",
-            "ingredients": ["Aguardente", "Honey", "Lemon juice"],
-            "pairing": "Spicy snacks",
-            "description": "A traditional Madeiran drink, sweet and tangy, ideal with spicy foods."
+            "ingredients": [
+                "Aguardente",
+                "Honey",
+                "Lemon juice"
+            ],
+            "pairing": "Bacalhau balls",
+            "description": "A traditional Madeiran drink, sweet and tangy.",
+            "steps": [
+                "In a shaker, combine aguardente, honey, and lemon juice.",
+                "Shake vigorously until well mixed.",
+                "Serve over ice in a glass."
+            ]
         },
         {
             "name": "Piña Colada",
             "description": "A tropical cocktail with a creamy, fruity flavor.",
             "pairing": "Tropical Fruit Skewers",
-            "ingredients": ["Rum", "Coconut cream", "Pineapple juice", "Ice"]
+            "ingredients": [
+                "Rum",
+                "Coconut cream",
+                "Pineapple juice",
+                "Ice"
+            ],
+            "steps": [
+                "In a blender, combine rum, coconut cream, pineapple juice, and ice.",
+                "Blend until smooth and creamy.",
+                "Pour into a glass and garnish with a pineapple slice."
+            ]
         },
         {
             "name": "Martini",
             "description": "A sophisticated cocktail with a smooth finish.",
-            "pairing": "Nuts",
-            "ingredients": ["Gin", "Dry Vermouth", "Olive or Lemon Twist"]
+            "pairing": "Olives and nuts",
+            "ingredients": [
+                "Gin",
+                "Dry Vermouth",
+                "Olive or Lemon Twist"
+            ],
+            "steps": [
+                "Pour gin and dry vermouth into a mixing glass with ice.",
+                "Stir well and strain into a chilled martini glass.",
+                "Garnish with an olive or lemon twist."
+            ]
         }
     ],
     "Pairing": [
         {
             "name": "Pastel",
             "description": "Delicious fried pastel, perfect for pairing with the citrusy caipirinha.",
-            "pairing": ["Caipirinha"]
+            "pairing": [
+                "Caipirinha"
+            ]
         },
         {
             "name": "Guacamole",
             "description": "A creamy avocado dip that pairs perfectly with nachos and mojitos.",
-            "pairing": ["Mojito"]
+            "pairing": [
+                "Mojito"
+            ]
         },
         {
             "name": "Ceviche",
             "description": "Fresh fish marinated in citrus, a great companion to pisco sour.",
-            "pairing": ["Pisco Sour"]
+            "pairing": [
+                "Pisco Sour"
+            ]
         },
         {
             "name": "Cheese Board",
             "description": "An assortment of cheeses that pairs beautifully with gin and tonic.",
-            "pairing": ["Gin and Tonic"]
+            "pairing": [
+                "Gin and Tonic"
+            ]
         },
         {
             "name": "Chips",
             "description": "Crunchy snacks that complement a variety of drinks.",
-            "pairing": ["Traçadinho", "Poncha"]
+            "pairing": [
+                "Traçadinho",
+                "Poncha"
+            ]
         },
         {
             "name": "Cod Fish ball",
             "description": "Flavored snacks that go well with the sweet and tangy poncha.",
-            "pairing": ["Poncha"]
+            "pairing": [
+                "Poncha"
+            ]
         },
         {
             "name": "Tropical Fruit Skewers",
             "description": "Skewers with tropical fruits that enhance the sweetness of a Piña Colada.",
-            "pairing": ["Piña Colada"]
+            "pairing": [
+                "Piña Colada"
+            ]
         },
         {
             "name": "Nuts",
             "description": "A light snack perfect for pairing with a classic Martini.",
-            "pairing": ["Martini"]
+            "pairing": [
+                "Martini"
+            ]
         }
     ]
 }

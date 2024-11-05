@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "coolvetica";
+    src: url("coolvetica\ rg.ttf");
+    font-family: "Aleo";
+    src: url("Aleo-Regular.ttf");
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
 body {
 
     --title: "coolvetica", sans-serif;
@@ -9,16 +20,23 @@ body {
     --scrollBar: #767676;
 }
 
-body::-webkit-scrollbar, .drinks::-webkit-scrollbar, .food::-webkit-scrollbar {
+
+body::-webkit-scrollbar,
+.drinks::-webkit-scrollbar,
+.food::-webkit-scrollbar {
     width: 4px;
     height: 4px;
 }
 
-body::-webkit-scrollbar-track, .drinks::-webkit-scrollbar-track, .food::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+.drinks::-webkit-scrollbar-track,
+.food::-webkit-scrollbar-track {
     background: none;
 }
 
-body::-webkit-scrollbar-thumb, .drinks::-webkit-scrollbar-thumb, .food::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb,
+.drinks::-webkit-scrollbar-thumb,
+.food::-webkit-scrollbar-thumb {
     background: var(--scrollBar);
     border-radius: 20px;
     border: none;
@@ -29,13 +47,22 @@ body::-webkit-scrollbar-thumb, .drinks::-webkit-scrollbar-thumb, .food::-webkit-
     position: relative;
     top: -8px;
     left: -8px;
+    width: 100%;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
 }
 
 .title {
     font-family: var(--title);
     background: var(--orange);
     display: flex;
-    width: 89.93rem;
+    width: 100vw;
     height: 35.125rem;
     padding: 3.5rem 2.5rem;
     flex-direction: column;
@@ -62,12 +89,46 @@ body::-webkit-scrollbar-thumb, .drinks::-webkit-scrollbar-thumb, .food::-webkit-
     line-height: normal;
 }
 
+.glassContainer {
+    position: relative;
+    width: 64px; 
+    height: 79px;
+}
+
+.glass {
+    width: 3.75rem;
+    height: 4.75rem;
+    stroke-width: 8px;
+    stroke: #FFF;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: swap 2s steps(1) infinite; 
+    display: none;
+}
+
+#glass1 {
+    animation-delay: 0s; 
+    display: block; 
+}
+
+#glass2 {
+    animation-delay: 1s; 
+}
+
+@keyframes swap {
+    0%, 49% { display: block; } 
+    50%, 100% { display: none; }
+}
+
+
 .arrow {
     display: flex;
     justify-content: center;
 }
 
-.containerDrink, .containerFood {
+.containerDrink,
+.containerFood {
     font-family: var(--title);
     display: flex;
     width: 90.75rem;
@@ -81,11 +142,14 @@ body::-webkit-scrollbar-thumb, .drinks::-webkit-scrollbar-thumb, .food::-webkit-
     font-size: xx-large;
 }
 
-.drinks, .food {
+.drinks,
+.food {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 1.5rem;
+    scrollbar-gutter: stable;
+
 }
 
 .size {
@@ -155,21 +219,27 @@ ul {
     z-index: 1000;
 }
 
-.popup-content {
+.popupContent {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
 }
 
-.close-popup {
+.closePopup {
     cursor: pointer;
     float: right;
     font-size: 24px;
     margin-top: -10px;
 }
 
-input:checked +label {
+input:checked+label {
     text-decoration: line-through;
     color: var(--scrollBar);
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
