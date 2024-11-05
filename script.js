@@ -72,8 +72,7 @@ function openPopup(item, type) {
             ol.appendChild(li);
         });
 
-        let drink = document.createElement('h5');
-        drink.textContent = 'Perfect with:';
+        pair.textContent = 'Perfect with:';
         pair.appendChild(drink);
 
         

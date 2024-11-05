@@ -1,9 +1,4 @@
-@font-face {
-    font-family: "coolvetica";
-    src: url("coolvetica\ rg.ttf");
-    font-family: "Aleo";
-    src: url("Aleo-Regular.ttf");
-}
+
 
 html {
     scroll-behavior: smooth; 
