@@ -55,8 +55,8 @@ body::-webkit-scrollbar-thumb,
     font-family: var(--title);
     background: var(--orange);
     display: flex;
-    width: 100vw;
-    height: 35.125rem;
+    width: 94.5vw;
+    height: 13rem;
     padding: 3.5rem 2.5rem;
     flex-direction: column;
     align-items: flex-start;
@@ -96,28 +96,26 @@ body::-webkit-scrollbar-thumb,
     position: absolute;
     width: 100%;
     height: 100%;
-    animation: swap 2s steps(1) infinite; 
-    display: none;
+    animation: swap 3s steps(1) infinite; 
+    opacity: 0;
+    visibility: hidden;
 }
 
 #glass1 {
-    animation-delay: 0s; 
-    display: block; 
+    animation-delay: 0s;
 }
 
 #glass2 {
-    animation-delay: 1s; 
+    animation-delay: 1s;
+}
+
+#glass3 {
+    animation-delay: 2s;
 }
 
 @keyframes swap {
-    0%, 49% { display: block; } 
-    50%, 100% { display: none; }
-}
-
-
-.arrow {
-    display: flex;
-    justify-content: center;
+    0%, 33% { opacity: 1; visibility: visible; } 
+    34%, 100% { opacity: 0; visibility: hidden; }
 }
 
 .containerDrink,
