@@ -63,10 +63,10 @@ body::-webkit-scrollbar-thumb,
 .title span {
     color: var(--white);
     font-family: Coolvetica;
-    font-size: 6rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    font-size: 5rem;
 }
 
 .title span+span {
@@ -80,11 +80,10 @@ body::-webkit-scrollbar-thumb,
 
 .glassContainer {
     position: relative;
-    width: 64px; 
+    width: 64px;
     height: 79px;
 }
 
-/* Default behavior for smaller screens: disable animation */
 .glass {
     width: 3.75rem;
     height: 4.75rem;
@@ -108,19 +107,6 @@ body::-webkit-scrollbar-thumb,
 #glass3 {
     animation-delay: 2s;
 }
-
-@media (min-width: 730px) {
-    .glass {
-        animation: swap 3s steps(1) infinite; /* Apply the animation only on larger screens */
-    }
-
-    /* Keyframes for the animation */
-    @keyframes swap {
-        0%, 33% { opacity: 1; visibility: visible; }
-        34%, 100% { opacity: 0; visibility: hidden; }
-    }
-}
-
 
 .containerDrink,
 .containerFood {
@@ -229,3 +215,34 @@ ol {
     align-items: flex-start;
 }
 
+
+@media (max-width: 430px) {
+    body {
+        overflow-y: hidden; /* Hide vertical scrollbar on mobile */
+    }
+
+    .title {
+        width: 100vw;
+    }
+
+    .title span {
+        font-size: 3rem;
+        width: 100vw;
+    }
+
+    #subtitle {
+        font-size: x-large;
+    }
+}
+
+@media (min-width: 730px) {
+    .glass {
+        animation: swap 3s steps(1) infinite; /* Apply animation only on larger screens */
+    }
+
+    @keyframes swap {
+        0%, 33% { opacity: 1; visibility: visible; }
+        34%, 100% { opacity: 0; visibility: hidden; }
+    }
+    
+}
