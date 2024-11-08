@@ -40,6 +40,7 @@ export function initializePopup() {
 
         ingredientsContainer.innerHTML = '';
         stepsContainer.innerHTML = '';
+        pair.innerHTML = " ";
 
         let heading = document.createElement('h5');
         heading.textContent = type === 'drink' ? 'Ingredients' : 'Eat it with:';
