@@ -1,4 +1,5 @@
 body {
+    overflow-x: hidden;
 
     --title: "coolvetica", sans-serif;
     --text: 'Aleo';
@@ -36,7 +37,7 @@ body::-webkit-scrollbar-thumb,
     position: relative;
     top: -8px;
     left: -8px;
-    width: 100%;
+    width: 100vw;
     margin: 0;
 }
 
@@ -51,7 +52,7 @@ body::-webkit-scrollbar-thumb,
     font-family: var(--title);
     background: var(--orange);
     display: flex;
-    width: 94.5vw;
+    width: 100vw;
     height: auto;
     padding: 3.5rem 2.5rem;
     flex-direction: column;
@@ -116,6 +117,7 @@ body::-webkit-scrollbar-thumb,
     align-items: flex-start;
     gap: 1.5rem;
     padding: 3rem 2rem;
+    width: 100vw;
 }
 
 .heading {
@@ -126,10 +128,10 @@ body::-webkit-scrollbar-thumb,
 .food {
     display: flex;
     flex-wrap: wrap;
-    overflow-x: hidden;
     width: 95vw;
     gap: 1.5rem;
     justify-content: center;
+
 }
 
 .size {
@@ -215,14 +217,37 @@ ol {
     align-items: flex-start;
 }
 
+@media (min-width: 730px) {
+    .glass {
+        animation: swap 3s steps(1) infinite;
+        /* Apply animation only on larger screens */
+    }
+
+    @keyframes swap {
+
+        0%,
+        33% {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        34%,
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+}
 
 @media (max-width: 430px) {
     body {
-        overflow-y: hidden; /* Hide vertical scrollbar on mobile */
+        overflow-y: hidden;
     }
 
     .title {
-        width: 100vw;
+        width: max-content;
+        padding: 3.5rem 4.5rem;
     }
 
     .title span {
@@ -233,16 +258,27 @@ ol {
     #subtitle {
         font-size: x-large;
     }
+
+    .containerDrink,
+    .containerFood {
+        width: max-content;
+        padding: 2rem ;
+
+    }
+
+    .drinks,
+    .food {
+        display: grid;
+        grid-template-columns: repeat(2, 15rem);
+        gap: 1rem;
+        width: inherit;
+        justify-content: start;
+    }
 }
 
-@media (min-width: 730px) {
-    .glass {
-        animation: swap 3s steps(1) infinite; /* Apply animation only on larger screens */
+@media (max-width: 340px) {
+    .title {
+        width: max-content;
+        padding: 3.5rem 8.5rem;
     }
-
-    @keyframes swap {
-        0%, 33% { opacity: 1; visibility: visible; }
-        34%, 100% { opacity: 0; visibility: hidden; }
-    }
-    
 }

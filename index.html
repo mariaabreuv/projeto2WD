@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/cgv4yms.css">    <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.typekit.net/cgv4yms.css">
+    <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
     <title>Pour Decisions</title>
 
 <body>
@@ -27,52 +27,51 @@
 
     <section class="containerDrink" id="containerDrink">
         <span class="heading">Drinks</span>
-        <div class="carousel-items">
-            <div class="drinks">
+        <div class="drinks">
 
-                <span class="cards">
-                    <img class="size" src="images/caipirinha.webp" alt="caipirinha">
-                    <h3>Caipirinha</h3>
-                    <span class="openPopup">How to make it</span>
-                </span>
-                <span class="cards">
-                    <img class="size" src="images/Mojito.webp" alt="Mojito">
-                    <h3>Mojito</h3>
-                    <span class="openPopup">How to make it</span>
-                </span>
+            <span class="cards">
+                <img class="size" src="images/caipirinha.webp" alt="caipirinha">
+                <h3>Caipirinha</h3>
+                <span class="openPopup">How to make it</span>
+            </span>
+            <span class="cards">
+                <img class="size" src="images/Mojito.webp" alt="Mojito">
+                <h3>Mojito</h3>
+                <span class="openPopup">How to make it</span>
+            </span>
 
-                <span class="cards">
-                    <img class="size" src="images/pisco.webp" alt="pisco">
-                    <h3>Pisco</h3>
-                    <span class="openPopup">How to make it</span>
-                </span>
-                <span class="cards">
-                    <img class="size" src="images/tracadinho.webp" alt="tracadinho">
-                    <h3>Traçadinho</h3>
-                    <span class="openPopup">How to make it</span>
-                </span>
-                <span class="cards">
-                    <img class="size" src="images/poncha.webp" alt="poncha">
-                    <h3>Poncha</h3>
-                    <span class="openPopup">How to make it</span>
-                </span>
-                <span class="cards">
-                    <img class="size" src="images/ginTonica.webp" alt="Gin&Tonica">
-                    <h3>Gin & Tonic</h3>
-                    <span class="openPopup">How to make it</span>
-                </span>
-                <span class="cards">
-                    <img class="size" src="images/martini.webp" alt="martini">
-                    <h3>Martini</h3>
-                    <span class="openPopup">How to make it</span>
-                </span>
-                <span class="cards">
-                    <img class="size" src="images/pinaColada.webp" alt="pinaColada">
-                    <h3>Piña Colada</h3>
-                    <span class="openPopup">How to make it</span>
-                </span>
-            </div>
+            <span class="cards">
+                <img class="size" src="images/pisco.webp" alt="pisco">
+                <h3>Pisco</h3>
+                <span class="openPopup">How to make it</span>
+            </span>
+            <span class="cards">
+                <img class="size" src="images/tracadinho.webp" alt="tracadinho">
+                <h3>Traçadinho</h3>
+                <span class="openPopup">How to make it</span>
+            </span>
+            <span class="cards">
+                <img class="size" src="images/poncha.webp" alt="poncha">
+                <h3>Poncha</h3>
+                <span class="openPopup">How to make it</span>
+            </span>
+            <span class="cards">
+                <img class="size" src="images/ginTonica.webp" alt="Gin&Tonica">
+                <h3>Gin & Tonic</h3>
+                <span class="openPopup">How to make it</span>
+            </span>
+            <span class="cards">
+                <img class="size" src="images/martini.webp" alt="martini">
+                <h3>Martini</h3>
+                <span class="openPopup">How to make it</span>
+            </span>
+            <span class="cards">
+                <img class="size" src="images/pinaColada.webp" alt="pinaColada">
+                <h3>Piña Colada</h3>
+                <span class="openPopup">How to make it</span>
+            </span>
         </div>
+
 
     </section>
 
@@ -141,6 +140,21 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('.openPopup').forEach(button => {
+            button.addEventListener('click', async () => {
+                try {
+                    // Use relative path to script.js
+                    const module = await import('./script.js');
+                    module.initializePopup();
+                } catch (error) {
+                    console.error("Failed to load script.js:", error);
+                }
+            });
+        });
+    </script>
+
 
 
 
