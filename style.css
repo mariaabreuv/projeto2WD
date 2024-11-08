@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth; 
-}
-
 body {
 
     --title: "coolvetica", sans-serif;
@@ -56,7 +52,7 @@ body::-webkit-scrollbar-thumb,
     background: var(--orange);
     display: flex;
     width: 94.5vw;
-    height: 13rem;
+    height: auto;
     padding: 3.5rem 2.5rem;
     flex-direction: column;
     align-items: flex-start;
@@ -88,6 +84,7 @@ body::-webkit-scrollbar-thumb,
     height: 79px;
 }
 
+/* Default behavior for smaller screens: disable animation */
 .glass {
     width: 3.75rem;
     height: 4.75rem;
@@ -96,7 +93,6 @@ body::-webkit-scrollbar-thumb,
     position: absolute;
     width: 100%;
     height: 100%;
-    animation: swap 3s steps(1) infinite; 
     opacity: 0;
     visibility: hidden;
 }
@@ -113,16 +109,23 @@ body::-webkit-scrollbar-thumb,
     animation-delay: 2s;
 }
 
-@keyframes swap {
-    0%, 33% { opacity: 1; visibility: visible; } 
-    34%, 100% { opacity: 0; visibility: hidden; }
+@media (min-width: 730px) {
+    .glass {
+        animation: swap 3s steps(1) infinite; /* Apply the animation only on larger screens */
+    }
+
+    /* Keyframes for the animation */
+    @keyframes swap {
+        0%, 33% { opacity: 1; visibility: visible; }
+        34%, 100% { opacity: 0; visibility: hidden; }
+    }
 }
+
 
 .containerDrink,
 .containerFood {
     font-family: var(--title);
     display: flex;
-    width: 90.75rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
@@ -136,11 +139,11 @@ body::-webkit-scrollbar-thumb,
 .drinks,
 .food {
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    width: 95vw;
     gap: 1.5rem;
-    scrollbar-gutter: stable;
-
+    justify-content: center;
 }
 
 .size {
@@ -162,15 +165,6 @@ h3 {
     background: var(--bgGrey);
     height: 15rem;
     justify-content: space-between;
-}
-
-.carousel-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    max-width: 100%;
-    padding: 0;
 }
 
 
@@ -234,3 +228,4 @@ ol {
     flex-direction: column;
     align-items: flex-start;
 }
+

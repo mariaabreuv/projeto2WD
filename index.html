@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.typekit.net/cgv4yms.css">    <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="script.js"></script>
     <title>Pour Decisions</title>
@@ -17,7 +17,7 @@
                 <span>Pour Decisions</span>
                 <div class="glassContainer">
                     <span><img class="glass" id="glass1" src="images/glass1.svg"></span>
-                    <span><img class="glass"  id="glass2" src="images/glass2.svg"></span>
+                    <span><img class="glass" id="glass2" src="images/glass2.svg"></span>
                     <span><img class="glass" id="glass3" src="images/glass3.svg"></span>
                 </div>
             </span>
@@ -27,9 +27,7 @@
 
     <section class="containerDrink" id="containerDrink">
         <span class="heading">Drinks</span>
-
-
-        <div class="carousel-container">
+        <div class="carousel-items">
             <div class="drinks">
 
                 <span class="cards">
@@ -42,7 +40,7 @@
                     <h3>Mojito</h3>
                     <span class="openPopup">How to make it</span>
                 </span>
-                
+
                 <span class="cards">
                     <img class="size" src="images/pisco.webp" alt="pisco">
                     <h3>Pisco</h3>
@@ -73,7 +71,6 @@
                     <h3>Piña Colada</h3>
                     <span class="openPopup">How to make it</span>
                 </span>
-
             </div>
         </div>
 
@@ -124,12 +121,12 @@
                     <h3>Ceviche</h3>
                     <span class="openPopup">Pair well with</span>
                 </span>
-                
+
             </div>
         </div>
     </section>
 
-    
+
 
     <div class="popup" id="popup" style="display: none;">
         <div class="popupContent">
@@ -139,11 +136,14 @@
             <h5 id="title"></h5>
             <div id="popupIngredients"></div>
             <div id="popupSteps"></div>
-            <div id="popupPair"></div>
+            <div>
+                <h3 id="popupPair"></h3>
+            </div>
         </div>
     </div>
-    
+
 
 
 </body>
+
 </html>

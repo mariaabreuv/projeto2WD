@@ -40,7 +40,6 @@ function openPopup(item, type) {
     ingredientsContainer.innerHTML = '';
     stepsContainer.innerHTML = '';
 
-
     let heading = document.createElement('h5');
     heading.textContent = type === 'drink' ? 'Ingredients' : 'Eat it with:';
     ingredientsContainer.appendChild(heading);
@@ -59,11 +58,11 @@ function openPopup(item, type) {
             ingredientsContainer.appendChild(checkbox);
             ingredientsContainer.appendChild(label);
             ingredientsContainer.appendChild(document.createElement('br'));
-
         });
+
         let instructions = document.createElement('h5');
         instructions.textContent = 'Step by step:';
-        ingredientsContainer.appendChild(instructions);
+        stepsContainer.appendChild(instructions);
 
         let ol = document.createElement('ol');
         item.steps.forEach(step => {
@@ -71,15 +70,10 @@ function openPopup(item, type) {
             li.textContent = step;
             ol.appendChild(li);
         });
-
-        let drink = document.createElement('h5');
-        drink.textContent = 'Perfect with:';
-        pair.appendChild(drink);
-
-        
-        
         stepsContainer.appendChild(ol);
 
+        pair.textContent = 'Perfect with: ' + item.pairing;
+        
     } else if (type === 'pairing') {
         item.pairing.forEach(drink => {
             let label = document.createElement('label');
@@ -93,8 +87,48 @@ function openPopup(item, type) {
 }
 
 
+
+
 document.addEventListener('click', event => {
     if (event.target.classList.contains('closePopup')) {
         document.getElementById('popup').style.display = 'none';
     }
 });
+
+
+if (window.innerWidth <= 768) {
+    // Mobile-only swipe functionality
+    let currentIndex = 0;
+    const cards = document.querySelectorAll('.cards');
+
+    function showCard(index) {
+        cards.forEach((card, i) => {
+            card.style.transform = `translateX(${100 * (i - index)}%)`;
+        });
+    }
+
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
+
+    let xDown = null;
+
+    function handleTouchStart(evt) {
+        xDown = evt.touches[0].clientX;
+    }
+
+    function handleTouchMove(evt) {
+        if (!xDown) return;
+
+        let xUp = evt.touches[0].clientX;
+        let xDiff = xDown - xUp;
+
+        if (xDiff > 0) {
+            currentIndex = (currentIndex + 1) % cards.length;  // Swipe left
+        } else {
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;  // Swipe right
+        }
+
+        showCard(currentIndex);
+        xDown = null;
+    }
+}
