@@ -278,7 +278,7 @@ ol {
 
 @media (max-width: 340px) {
     .title {
-        width: max-content;
+        width: 100vw;
         padding: 3.5rem 8.5rem;
     }
 }
